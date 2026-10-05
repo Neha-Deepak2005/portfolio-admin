@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-[#f7f5ff] text-slate-800 antialiased; }
+  h1, h2, h3 { @apply font-display; }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-2xl shadow-[0_4px_24px_-8px_rgba(124,58,237,0.18)] border border-violet-100/70; }
+  .input {
+    @apply w-full rounded-xl border-2 border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none transition
+           focus:border-violet-500 focus:ring-4 focus:ring-violet-500/15 placeholder:text-slate-400;
+  }
+  .label { @apply block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold transition active:scale-[.97] disabled:opacity-50 disabled:pointer-events-none; }
+  .btn-primary { @apply btn text-white bg-gradient-to-r from-violet-600 via-fuchsia-500 to-orange-400 shadow-lg shadow-fuchsia-500/30 hover:shadow-fuchsia-500/50 hover:brightness-110; }
+  .btn-soft { @apply btn bg-violet-50 text-violet-700 hover:bg-violet-100; }
+  .btn-ghost { @apply btn text-slate-600 hover:bg-slate-100; }
+  .btn-danger { @apply btn bg-rose-50 text-rose-600 hover:bg-rose-100; }
+  .gradient-text { @apply bg-gradient-to-r from-violet-600 via-fuchsia-500 to-orange-400 bg-clip-text text-transparent; }
+}
+
+.prose-preview h1 { @apply text-2xl font-bold mt-4 mb-2; }
+.prose-preview h2 { @apply text-xl font-bold mt-4 mb-2 text-violet-700; }
+.prose-preview h3 { @apply text-lg font-bold mt-3 mb-1; }
+.prose-preview p { @apply my-2 leading-relaxed; }
+.prose-preview ul { @apply list-disc pl-6 my-2; }
+.prose-preview ol { @apply list-decimal pl-6 my-2; }
+.prose-preview code { @apply bg-violet-50 text-fuchsia-600 rounded px-1 py-0.5 text-sm; }
+.prose-preview pre { @apply bg-slate-900 text-slate-100 rounded-xl p-4 my-3 overflow-x-auto; }
+.prose-preview pre code { @apply bg-transparent text-slate-100 p-0; }
+.prose-preview a { @apply text-fuchsia-600 underline; }
+.prose-preview blockquote { @apply border-l-4 border-fuchsia-400 pl-4 italic text-slate-600; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#a78bfa, #f472b6); border-radius: 10px; }
